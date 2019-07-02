@@ -1,0 +1,61 @@
+<html lang="en">
+  <head>
+    <base href="./">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="CoreUI - Open Source Bootstrap Admin Template">
+    <meta name="author" content="Łukasz Holeczek">
+    <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
+    <title>Oyo Submit Data</title>
+    <!-- Icons-->
+    <link rel="icon" type="image/ico" href="./img/favicon.ico" sizes="any" />
+    <link href="node_modules/@coreui/icons/css/coreui-icons.min.css" rel="stylesheet">
+    <link href="node_modules/flag-icon-css/css/flag-icon.min.css" rel="stylesheet">
+    <link href="node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="node_modules/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+    <!-- Main styles for this application-->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="vendors/pace-progress/css/pace.min.css" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics-->
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-118965717-3"></script>
+  <script type="text/javascript" src="js/dropzone.js"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    // Shared ID
+    gtag('config', 'UA-118965717-3');
+    // Bootstrap ID
+    gtag('config', 'UA-118965717-5');
+  </script>
+  </head>
+  <body class="app header-fixed">
+  <header class="app-header navbar">
+    <ul class="nav navbar-nav d-md-down-none">
+      <li class="nav-item px-3">
+        <a class="nav-link" href="#">Dashboard</a>
+      </li>
+      <li class="nav-item px-3">
+        <a class="nav-link" href="submitData.html">Submit Data</a>
+      </li>
+    </ul>
+  </header>
+  <div class="app-body">
+    <main class="main">
+      <div class="container-fluid">
+        <div class="animated fadeIn">
+            <div class="row justify-content-center">
+              <div class="col align-self-center mt-4">
+                <form id="upload-widget" method=POST action="https://oyo.peliondev.com:8080/api/upload" class="dropzone">
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
