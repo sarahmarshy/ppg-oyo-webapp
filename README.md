@@ -42,3 +42,6 @@ free-bootstrap-admin-template/
 └── package.json
 ```
 
+## CSV File Upload Mechanics
+
+Dropzonejs is used in the frontend to allow users to drag and drop or select through their computer's file explorer a CSV file to submit for upload. Select the `Submit Data` field on the webpage's navigation bar and select your file. Once uploaded, the file is stored, parsed, and uploaded to Treasure Data. The server can then run jobs to pre-calculate the desired statistics for a range of time slots/locations and cache them on the server for display by the frontend.
