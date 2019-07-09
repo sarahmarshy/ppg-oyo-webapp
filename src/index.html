@@ -57,6 +57,7 @@
       <main class="main">
         <div class="container-fluid">
           <div class="animated fadeIn">
+            <button onclick="httpGet()">Click me</button>
             <div class="row">
               <div class="col align-self-center mt-4">
                 <div class="card">
@@ -635,5 +636,35 @@
     <script src="node_modules/chart.js/dist/Chart.min.js"></script>
     <script src="node_modules/@coreui/coreui-plugin-chartjs-custom-tooltips/dist/js/custom-tooltips.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+
+        function percent_cancel(arr) {
+            var num_cancel = arr.reduce((accumulator, currentValue) => {
+                if (currentValue[5]) {
+                    return accumulator + 1;
+                }
+                return accumulator;
+            }, 0);
+            return num_cancel/arr.length;
+        } 
+
+        function get_resp(txt) {
+            console.log(txt);
+            var obj = JSON.parse(txt);
+            // Get the number of cancellations
+            console.log(percent_cancel(obj));
+        }
+
+        function httpGet()
+        {
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.onreadystatechange = function() { 
+                if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+                    get_resp(xmlHttp.responseText);
+            }
+            xmlHttp.open("GET", "https://oyo.peliondev.com:8080/api/getfrom/0", true); // true for asynchronous 
+            xmlHttp.send(null);
+        }
+    </script>
   </body>
 </html>
