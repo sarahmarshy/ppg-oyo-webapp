@@ -2,9 +2,9 @@
 <html lang="en">
   <head>
     <base href="./">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
     <title>Oyo Dashboard</title>
   </head>
   <body class="app header-fixed">
@@ -208,7 +208,6 @@
                               <div class="progress-bar bg-success" role="progressbar" style="width: 5%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
                           </td>
-                          </td>
                           <td>
                             <div class="clearfix">
                               <div class="float-left">
@@ -269,7 +268,6 @@
                             <div class="progress progress-xs">
                               <div class="progress-bar bg-success" role="progressbar" style="width: 27%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
-                          </td>
                           </td>
                           <td>
                             <div class="clearfix">
@@ -591,8 +589,6 @@
 export default {
     name: 'Dashboard',
     props: [],
-    data() {
-    },
     computed: {
     },
     watch: {
@@ -602,3 +598,4 @@ export default {
     methods: {
     }
 }
+</script>

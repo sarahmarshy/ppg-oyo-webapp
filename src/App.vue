@@ -9,9 +9,6 @@
 import Dashboard from './components/Dashboard.vue';
 import SubmitData from './components/SubmitData.vue';
 
-require('@/../public/css/style.css')
-require('@/../public/css/dropzone.css')
-
 export default {
     name: 'App',
     components: {
@@ -22,7 +19,3 @@ export default {
     },
 };
 </script>
-
-<style>
-
-</style>
