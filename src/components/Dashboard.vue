@@ -45,6 +45,13 @@
                           <td>
                             <div> {{ hotel[0] }} </div>
                           </td>
+                          <td>
+                            <!-- TODO -->
+                            0
+                          </td>
+                          <td>
+                            <div> {{ hotel[1] }} </div>
+                          </td>
                         </tr>
                         </template>
                       </tbody>
