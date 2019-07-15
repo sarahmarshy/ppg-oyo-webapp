@@ -41,16 +41,16 @@
                       </thead>
                       <tbody>
                         <template v-for="hotel in hotel_cancellations">
-                        <tr v-bind:key="hotel[0]">
+                        <tr v-bind:key="hotel[property_i]">
                           <td>
-                            <div> {{ hotel[0] }} </div>
+                            <div> {{ hotel[property_i] }} </div>
                           </td>
                           <td>
                             <!-- TODO -->
                             0
                           </td>
                           <td>
-                            <div> {{ hotel[1] }} </div>
+                            <div> {{ hotel[cancellation_rate_i] }} </div>
                           </td>
                         </tr>
                         </template>
@@ -363,6 +363,8 @@ export default {
             room_cancellations: [],
             fetch_done: 0,
             hotel_cancellations: [],
+            property_i: 0,
+            cancellation_rate_i: 1
         }
     },
     props: [],
