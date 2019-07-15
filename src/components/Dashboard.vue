@@ -40,250 +40,13 @@
                         </tr>
                       </thead>
                       <tbody>
-                        <!-- Hotel 1-->
+                        <template v-for="hotel in hotel_cancellations">
                         <tr>
                           <td>
-                            <div>Hotel Michelle</div>
-                            <div class="small text-muted">
-                              <span>Seattle, WA</span> | Built: Jan 1, 2015</div>
-                          </td>
-                          <td>
-                            <div class="clearfix">
-                              <div class="float-left">
-                                <strong>50%</strong>
-                              </div>
-                              <div class="float-right">
-                                <small class="text-muted">Jun 11, 2015 - Jul 10, 2015</small>
-                              </div>
-                            </div>
-                            <div class="progress progress-xs">
-                              <div class="progress-bar bg-success" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                          </td>
-                          <td>
-                            <div class="clearfix">
-                              <div class="float-left">
-                                <strong>6%</strong>
-                              </div>
-                              <div class="float-right">
-                                <small class="text-muted">Jun 11, 2015 - Jul 10, 2015</small>
-                              </div>
-                            </div>
-                            <div class="progress progress-xs">
-                              <div class="progress-bar bg-success" role="progressbar" style="width: 6%" aria-valuenow="6" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                          </td>
-                          <td>
-                            <div class="clearfix">
-                              <div class="float-left">
-                                <strong>15%</strong>
-                              </div>
-                              <div class="float-right">
-                                <small class="text-muted">Jun 11, 2015 - Jul 10, 2015</small>
-                              </div>
-                            </div>
-                            <div class="progress progress-xs">
-                              <div class="progress-bar bg-success" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                          </td>
-                          <td>
-                            <div class="clearfix">
-                              <div class="float-left">
-                                <strong>36.5</strong>
-                              </div>
-                            </div>
-                          </td>
-                          <td>
-                            <div class="clearfix">
-                              <div class="float-left">
-                                <strong>10.3</strong>
-                              </div>
-                            </div>
+                            <div> {{ hotel[0] }} </div>
                           </td>
                         </tr>
-                        <!-- Hotel 2-->
-                        <tr>
-                          <td>
-                            <div>Rocky Raccoon Motel</div>
-                            <div class="small text-muted">
-                              <span>Liverpool, UK</span> | Built: Feb 1, 2014</div>
-                          </td>
-                          <td>
-                            <div class="clearfix">
-                              <div class="float-left">
-                                <strong>20%</strong>
-                              </div>
-                              <div class="float-right">
-                                <small class="text-muted">Jun 11, 2015 - Jul 10, 2015</small>
-                              </div>
-                            </div>
-                            <div class="progress progress-xs">
-                              <div class="progress-bar bg-success" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                          </td>
-                          <td>
-                            <div class="clearfix">
-                              <div class="float-left">
-                                <strong>50%</strong>
-                              </div>
-                              <div class="float-right">
-                                <small class="text-muted">Jun 11, 2015 - Jul 10, 2015</small>
-                              </div>
-                            </div>
-                            <div class="progress progress-xs">
-                              <div class="progress-bar bg-success" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                          </td>
-                          <td>
-                            <div class="clearfix">
-                              <div class="float-left">
-                                <strong>26%</strong>
-                              </div>
-                              <div class="float-right">
-                                <small class="text-muted">Jun 11, 2015 - Jul 10, 2015</small>
-                              </div>
-                            </div>
-                            <div class="progress progress-xs">
-                              <div class="progress-bar bg-success" role="progressbar" style="width: 26%" aria-valuenow="26" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                          </td>
-                          <td>
-                            <div class="clearfix">
-                              <div class="float-left">
-                                <strong>25</strong>
-                              </div>
-                            </div>
-                          </td>
-                          <td>
-                            <div class="clearfix">
-                              <div class="float-left">
-                                <strong>5.3</strong>
-                              </div>
-                            </div>
-                          </td>
-                        </tr>
-                        <!-- Hotel 3-->
-                        <tr>
-                          <td>
-                            <div>Norweigan Wood Inn and Suites</div>
-                            <div class="small text-muted">
-                              <span>Oslo, NO</span> | Built: March 1, 2013</div>
-                          </td>
-                          <td>
-                            <div class="clearfix">
-                              <div class="float-left">
-                                <strong>59%</strong>
-                              </div>
-                              <div class="float-right">
-                                <small class="text-muted">Jun 11, 2015 - Jul 10, 2015</small>
-                              </div>
-                            </div>
-                            <div class="progress progress-xs">
-                              <div class="progress-bar bg-success" role="progressbar" style="width: 59%" aria-valuenow="59" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                          </td>
-                          <td>
-                            <div class="clearfix">
-                              <div class="float-left">
-                                <strong>2%</strong>
-                              </div>
-                              <div class="float-right">
-                                <small class="text-muted">Jun 11, 2015 - Jul 10, 2015</small>
-                              </div>
-                            </div>
-                            <div class="progress progress-xs">
-                              <div class="progress-bar bg-success" role="progressbar" style="width: 2%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                          </td>
-                          <td>
-                            <div class="clearfix">
-                              <div class="float-left">
-                                <strong>5%</strong>
-                              </div>
-                              <div class="float-right">
-                                <small class="text-muted">Jun 11, 2015 - Jul 10, 2015</small>
-                              </div>
-                            </div>
-                            <div class="progress progress-xs">
-                              <div class="progress-bar bg-success" role="progressbar" style="width: 5%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                          </td>
-                          <td>
-                            <div class="clearfix">
-                              <div class="float-left">
-                                <strong>11.7</strong>
-                              </div>
-                            </div>
-                          </td>
-                          <td>
-                            <div class="clearfix">
-                              <div class="float-left">
-                                <strong>7.8</strong>
-                              </div>
-                            </div>
-                          </td>
-                        </tr>
-                        <!-- Hotel 4-->
-                        <tr>
-                          <td>
-                            <div>Sgt. Pepper's Lonely Hotel</div>
-                            <div class="small text-muted">
-                              <span>New York, NY</span> | Built: May 6, 1969</div>
-                          </td>
-                          <td>
-                            <div class="clearfix">
-                              <div class="float-left">
-                                <strong>10%</strong>
-                              </div>
-                              <div class="float-right">
-                                <small class="text-muted">Jun 11, 2015 - Jul 10, 2015</small>
-                              </div>
-                            </div>
-                            <div class="progress progress-xs">
-                              <div class="progress-bar bg-success" role="progressbar" style="width: 10%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                          </td>
-                          <td>
-                            <div class="clearfix">
-                              <div class="float-left">
-                                <strong>39%</strong>
-                              </div>
-                              <div class="float-right">
-                                <small class="text-muted">Jun 11, 2015 - Jul 10, 2015</small>
-                              </div>
-                            </div>
-                            <div class="progress progress-xs">
-                              <div class="progress-bar bg-success" role="progressbar" style="width: 39%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                          </td>
-                          <td>
-                            <div class="clearfix">
-                              <div class="float-left">
-                                <strong>27%</strong>
-                              </div>
-                              <div class="float-right">
-                                <small class="text-muted">Jun 11, 2015 - Jul 10, 2015</small>
-                              </div>
-                            </div>
-                            <div class="progress progress-xs">
-                              <div class="progress-bar bg-success" role="progressbar" style="width: 27%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                          </td>
-                          <td>
-                            <div class="clearfix">
-                              <div class="float-left">
-                                <strong>19.8</strong>
-                              </div>
-                            </div>
-                          </td>
-                          <td>
-                            <div class="clearfix">
-                              <div class="float-left">
-                                <strong>5.5</strong>
-                              </div>
-                            </div>
-                          </td>
-                        </tr>
+                        </template>
                       </tbody>
                     </table>
                   </div>
@@ -588,14 +351,53 @@
 <script>
 export default {
     name: 'Dashboard',
+    data: function() {
+        return {
+            room_cancellations: [],
+            fetch_done: 0,
+            hotel_cancellations: [],
+        }
+    },
     props: [],
     computed: {
-    },
-    watch: {
+        /*
+        hotels: function() {
+            console.log('hi');
+            return this.hotel_cancellations;
+        }   
+        */
     },
     mounted() {
+        this.getHotelCancellations();
     },
     methods: {
+        getRoomCancellations: function() 
+        {
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.onreadystatechange = function() { 
+                if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+                    this.room_cancellations = xmlHttp.responseText;
+                    console.log(this.room_cancellations);
+                    return JSON.parse(xmlHttp.responseText);
+            }
+            xmlHttp.open("GET", "https://oyo.peliondev.com:8080/api/getroomcancellation", true); // true for asynchronous 
+            xmlHttp.send(null);
+        },
+        getHotelCancellations: function() 
+        {
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.onreadystatechange = function() { 
+                if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+                    this.hotel_cancellations = JSON.parse(xmlHttp.responseText);
+                    this.fetch_done = 1;
+                    console.log(this.fetch_done);
+                    console.log(this.hotel_cancellations);
+                }
+            }
+            console.log(this.fetch_done);
+            xmlHttp.open("GET", "https://oyo.peliondev.com:8080/api/getcancellation", true); // true for asynchronous 
+            xmlHttp.send(null);
+        }
     }
 }
 </script>
