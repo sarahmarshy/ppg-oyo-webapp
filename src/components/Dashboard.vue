@@ -33,7 +33,7 @@
                         <tr>
                           <th>Hotel</th>
                           <th>Room Occupancy</th>
-                          <th>Room Cancellation</th>
+                          <th>Room Cancellation Rate</th>
                           <th>Cancelled Rooms Occupied</th>
                           <th>Average Stay Duration (Hours)</th>
                           <th>Average Time to Cancel (Hours)</th>
