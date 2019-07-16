@@ -41,16 +41,16 @@
                       </thead>
                       <tbody>
                         <template v-for="hotel in hotel_cancellations">
-                        <tr v-bind:key="hotel[0]">
+                        <tr>
                           <td>
-                            <div> {{ hotel[0] }} </div>
+                            <div> {{ hotel.name }} </div>
                           </td>
                           <td>
                             <!-- TODO -->
                             0
                           </td>
                           <td>
-                            <div> {{ hotel[1] }} </div>
+                            <div> {{ hotel.rate }}% </div>
                           </td>
                         </tr>
                         </template>
@@ -366,14 +366,6 @@ export default {
         }
     },
     props: [],
-    computed: {
-        /*
-        hotels: function() {
-            console.log('hi');
-            return this.hotel_cancellations;
-        }
-        */
-    },
     mounted() {
         this.getHotelCancellations();
     },
@@ -400,7 +392,10 @@ export default {
                 responseType: 'json'
             }).then(function(response) {
                 console.log('response.data', response.data);
-                self.hotel_cancellations = response.data;
+                self.hotel_cancellations = response.data.map(obj =>{ 
+                    var rObj = {'name': obj[0], 'rate': obj[1]};
+                    return rObj;
+                });
                 console.log('this.categories', self.hotel_cancellations);
             });
         }
