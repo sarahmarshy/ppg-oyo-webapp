@@ -1,7 +1,7 @@
 <template>
 <html lang="en">
   <head>
-    <base href="./">
+    <base href="./" />
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
@@ -9,7 +9,7 @@
   </head>
   <body class="app header-fixed">
     <header class="app-header navbar">
-      <img class="navbar-brand-full" src="../../public/img/logo.svg" width="89" height="25">
+      <img class="navbar-brand-full" src="../../public/img/logo.svg" width="89" height="25" />
       <ul class="nav navbar-nav d-md-down-none">
         <li class="nav-item px-3">
           <a class="nav-link" href="#">Dashboard</a>
@@ -33,7 +33,7 @@
                         <tr>
                           <th>Hotel</th>
                           <th>Room Occupancy</th>
-                          <th>Room Cancellation</th>
+                          <th>Room Cancellation Rate</th>
                           <th>Cancelled Rooms Occupied</th>
                           <th>Average Stay Duration (Hours)</th>
                           <th>Average Time to Cancel (Hours)</th>
@@ -41,9 +41,16 @@
                       </thead>
                       <tbody>
                         <template v-for="hotel in hotel_cancellations">
-                        <tr>
+                        <tr v-bind:key="hotel[property_i]">
                           <td>
-                            <div> {{ hotel[0] }} </div>
+                            <div> {{ hotel[property_i] }} </div>
+                          </td>
+                          <td>
+                            <!-- TODO -->
+                            0
+                          </td>
+                          <td>
+                            <div> {{ hotel[cancellation_rate_i] }} </div>
                           </td>
                         </tr>
                         </template>
@@ -356,6 +363,8 @@ export default {
             room_cancellations: [],
             fetch_done: 0,
             hotel_cancellations: [],
+            property_i: 0,
+            cancellation_rate_i: 1
         }
     },
     props: [],
@@ -364,39 +373,38 @@ export default {
         hotels: function() {
             console.log('hi');
             return this.hotel_cancellations;
-        }   
+        }
         */
     },
     mounted() {
         this.getHotelCancellations();
     },
     methods: {
-        getRoomCancellations: function() 
+        getRoomCancellations: function()
         {
             var xmlHttp = new XMLHttpRequest();
-            xmlHttp.onreadystatechange = function() { 
+            xmlHttp.onreadystatechange = function() {
                 if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
                     this.room_cancellations = xmlHttp.responseText;
                     console.log(this.room_cancellations);
                     return JSON.parse(xmlHttp.responseText);
             }
-            xmlHttp.open("GET", "https://oyo.peliondev.com:8080/api/getroomcancellation", true); // true for asynchronous 
+            xmlHttp.open("GET", "https://oyo.peliondev.com:8080/api/getroomcancellation", true); // true for asynchronous
             xmlHttp.send(null);
         },
-        getHotelCancellations: function() 
+        getHotelCancellations: function()
         {
-            var xmlHttp = new XMLHttpRequest();
-            xmlHttp.onreadystatechange = function() { 
-                if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
-                    this.hotel_cancellations = JSON.parse(xmlHttp.responseText);
-                    this.fetch_done = 1;
-                    console.log(this.fetch_done);
-                    console.log(this.hotel_cancellations);
-                }
-            }
-            console.log(this.fetch_done);
-            xmlHttp.open("GET", "https://oyo.peliondev.com:8080/api/getcancellation", true); // true for asynchronous 
-            xmlHttp.send(null);
+            const self = this;
+            axios({
+                method: "GET",
+                url: "getcancellation",
+                baseURL: 'https://oyo.peliondev.com:8080/api/',
+                responseType: 'json'
+            }).then(function(response) {
+                console.log('response.data', response.data);
+                self.hotel_cancellations = response.data;
+                console.log('this.categories', self.hotel_cancellations);
+            });
         }
     }
 }
